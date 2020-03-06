@@ -51,6 +51,40 @@ It means that you can:
 
 [Read the official "Getting Started" guide](https://api-platform.com/docs/distribution).
 
+### Quick install HOWTO
+
+* Clone this repository first
+
+* Start the application
+
+
+    $ docker-compose pull # Download the latest versions of the pre-built images
+    $ docker-compose up -d # Running in detached mode    
+
+## Installing and using Maker bundle
+
+### Installing Maker bundle
+
+    dc exec php composer require symfony/maker-bundle --dev
+
+### Creating new entity
+
+https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
+
+This command starts an interactive shell which can be used to create a new entity and add some properties:
+
+    dc exec php bin/console make:entity
+
+Create migrations for the new entity
+
+    dc exec php bin/console make:migration
+    
+Execute migrations
+
+    dc exec php bin/console doctrine:migrations:migrate
+    
+The new endpoint for the entity is ready.
+
 ## Credits
 
 Created by [Kévin Dunglas](https://dunglas.fr). Commercial support available at [Les-Tilleuls.coop](https://les-tilleuls.coop).
