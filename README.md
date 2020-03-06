@@ -53,10 +53,9 @@ It means that you can:
 
 ### Quick install HOWTO
 
-* Clone this repository first
+Clone this repository first
 
-* Start the application
-
+Start the application
 
     $ docker-compose pull # Download the latest versions of the pre-built images
     $ docker-compose up -d # Running in detached mode    
